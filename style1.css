@@ -1,0 +1,44 @@
+body{
+    background-color: #4D4D4E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.box{
+    height: auto;
+    width: 700px;
+    background-color: #D5DFE7;
+    border-radius: 8px;
+    /* position: absolute; */
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+}
+
+.para{
+    font-family: 'Tiro Devanagari Hindi', serif;
+    /* top: -3%; */
+    /* left: 2%; */
+    font-size: 28px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+#txtMessage{
+    border: none;
+    background-color: #D5DFE7;
+    position: absolute;
+    top: 26%;
+    left: 20%;
+    opacity: 0;
+
+}
+#txtMessage:focus{
+    outline: none;
+    opacity: 0;
+}

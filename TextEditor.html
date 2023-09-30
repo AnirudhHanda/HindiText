@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="Icon" href="assets/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gluten&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="script.js"></script>
+
+    <script type="text/javascript">
+            google.load("elements", "1", { packages: "transliteration" });
+            var control;
+            function onLoad() {         
+                var options = {
+                    //Source Language
+                    sourceLanguage: google.elements.transliteration.LanguageCode.ENGLISH,
+                    // Destination language to Transliterate
+                    destinationLanguage: [google.elements.transliteration.LanguageCode.HINDI],
+                    shortcutKey: 'ctrl+g',
+                    transliterationEnabled: true
+                };                     
+                control = new google.elements.transliteration.TransliterationControl(options);  
+                control.makeTransliteratable(['txtMessage']);   
+            }
+            google.setOnLoadCallback(onLoad);         
+    </script>
+
+</head>
+<body>
+    <h1 style="font-size:45px; font-family: 'Gluten', cursive;
+    font-family: 'Tiro Devanagari Hindi', serif; color: #F89820;"><span style=" color: #F89820; font-family: 'Tiro Devanagari Hindi', serif;">हिंदी</span>Text</h2>
+
+    <div class="box">
+        <textarea type="text" id="txtMessage" name="txtMessage"></textarea>
+        <p class="para" style="z-index: 5; position:relative;   "></p>
+    </div>
+
+
+    <script src="app1.js"></script>
+</body>
+</html>
